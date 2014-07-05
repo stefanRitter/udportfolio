@@ -27,7 +27,7 @@
       img { border: 0; max-width: 100%; }
       body { background: #fff; }
       header, footer, .container { max-width: 45em; margin: 0 auto; }
-      header { padding: 0 0.5em; color: #C90B0B; }
+      header { padding: 0 0.5em; }
       header img { border-radius: 40px; float: left; }
       header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
       header p span { font-size: 0.8em; font-weight: normal;}
@@ -35,8 +35,8 @@
         border-bottom: 1px solid #ccc;
         border-top: 1px solid #ccc;
       }
-      .content { padding: 1em 1em; }
-      .content li { list-style-type: none; font-size: 1.1em;}
+      .content { padding: 0 1em 1em 1em; overflow: hidden;}
+      .content li { list-style-type: none; font-size: 1.1em; clear: both; padding-top: 2em;}
       li img { float:left; padding-right: 1em; }
       li p { font-size: 0.9em; font-style: italic; }
       footer {
@@ -44,6 +44,7 @@
         border-top: 1px solid #ccc;
       }
       footer span { float: right; font-style: italic; }
+      .small-img { width: 115px; }
       @media only screen and (max-width: 480px) {
         body { font-size: 12px;}
         header p { padding-left: 4.5em;}
@@ -67,27 +68,35 @@
       <div class="content">
         <ul>
           <li>
-            <img src="http://www.stefanritter.com/images/canvas.png">
+            <img src="http://www.stefanritter.com/images/canvas.png" class="small-img">
             <a href="http://www.ihrtcanvas.com/" target="_blank">I &hearts; canvas</a>
-            <p>A diary of html5 &lt;canvas&gt; experiments including some WebGL, and here and there the occasional web Worker.</p>
+            <p>
+              A diary of html5 &lt;canvas&gt; experiments including some WebGL, and here and there the occasional WebWorker.
+            </p>
           </li>
-
+          
           <li>
-            <img src="http://buzzzrrr.herokuapp.com/img/logo.png">
-            <a href="http://www.buzzr.io/" target="_blank">Buzzr</a>
-            <p>Pick a topic, let Buzzr tell you what's hot.</p>
-          </li>
-
-          <li>
-            <img src="http://www.stefanritter.com/images/cream.png">
+            <img src="http://www.stefanritter.com/images/cream.png" class="small-img">
             <a href="http://stefanritter.github.io/creamyJS/">CreamyJS</a>
             <p>Final project of Udacity's HTML5 Game development course.</p>
+          </li>
+          
+          <li>
+            <img src="http://buzzzrrr.herokuapp.com/img/logo.png" class="small-img">
+            <a href="http://www.buzzr.io/" target="_blank">Buzzr</a>
+            <p>
+              Pick a topic, let Buzzr tell you what's hot.
+              <br>
+              Buzzr listens to Twitter for you.
+              <br>
+              Built with the MEAN stack.
+            </p>
           </li>
         </ul>
     </div>
 
     <footer>
-      <p>Built as part of the <a href="https://www.udacity.com/course/ud884">Udacity Web Performance Course 2014</a><span id="crp-stats"></span></p>
+      <p>Built with <a href="https://www.udacity.com/course/ud884">Udacity Web Performance Course 2014</a><span id="crp-stats"></span></p>
     </footer>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
